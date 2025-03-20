@@ -37,4 +37,6 @@ model MachineWorkOrder {
   startTime   DateTime
   endTime     DateTime
   status      String    @default("scheduled")
+
+  @@unique([workOrderId, startTime])
 }

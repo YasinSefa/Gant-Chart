@@ -34,7 +34,7 @@ const CustomTooltip = ({ x, y, task, machineName, visible }) => {
             boxShadow: '0 4px 8px rgba(0,0,0,0.15)',
             maxWidth: '300px',
             transform: 'translate(-50%, -100%)',
-            marginTop: '250px',
+            marginTop: '220px',
             zIndex: 1000,
             pointerEvents: 'none'
         }}>
@@ -86,7 +86,7 @@ const GanttChart = ({ data, highlightedOrder }) => {
     // Sabit değerler
     const CHART_PADDING = 40;
     const LEFT_AXIS_WIDTH = 150;
-    const BOTTOM_AXIS_HEIGHT = 60;
+    const BOTTOM_AXIS_HEIGHT = 90;
     const ROW_HEIGHT = 60;
     const BAR_HEIGHT = 40;
 
@@ -274,10 +274,12 @@ const GanttChart = ({ data, highlightedOrder }) => {
                                     y={machine.y - BAR_HEIGHT / 2}
                                     width={endX - startX}
                                     height={BAR_HEIGHT}
-                                    fill={isHighlighted(task.workOrderNumber) ? '#ffeb3b' : '#4169e1'}
+                                    fill={isHighlighted(task.workOrderNumber) ? '#ffeb3b' : 'black'}
                                     rx={6}
                                     ry={6}
-                                    opacity={hoveredTask?.workOrderNumber === task.workOrderNumber ? 0.8 : 1}
+                                    opacity={hoveredTask?.workOrderNumber === task.workOrderNumber ? 0.6 : 1}
+                                    stroke={isHighlighted(task.workOrderNumber) ? 'white' : 'white'}
+                                    strokeWidth={1}
                                 />
                             </g>
                         );

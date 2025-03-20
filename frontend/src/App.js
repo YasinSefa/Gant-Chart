@@ -46,7 +46,7 @@ function App() {
     <Container maxWidth="xl">
       <Box sx={{ my: 4 }}>
         <Typography variant="h4" component="h1" gutterBottom>
-          Production Planning Gant Chart
+          Production Planning Gantt Chart
         </Typography>
 
         <Search onSearch={handleSearch} />
